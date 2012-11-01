@@ -1,37 +1,20 @@
 import java.util.Scanner;
+import java.io.File;
 import java.io.FileNotFoundException;
 
-public class ClassicWorldMain {
+public class ClassicWorldMain extends General {
 	public static void main(String[] args) throws FileNotFoundException {
 		Scanner console = new Scanner(System.in);
-		printIntro();
-		//oi
+		System.out.println(readFile("Intro.txt"));
+		System.out.println();
 		String name = getName(console);
 		String type = getType(name, console);
 		Character character = createCharacter(type, console);
 		town(character, console);
-
-	}
-      
-	private static void printIntro() {
-		System.out.println("Welcome to ClassicWorld, created by Elliot Keder and James Murphree(3-19-2012)");
-		System.out.println("Prepare to slay monsters, rescue princesses, find treasure, and");
-		System.out.println("prove your honor in this classic-fashioned adventure game. . .");
-		System.out.println();
 	}
   
-	private static String getName(Scanner console) {
-		System.out.println("You awake on the bank of a swift river. You have a pounding");
-		System.out.println("headache and your lower lip and cheek are bleeding. Your light");
-		System.out.println("brown tunic and leather pants are thoroughly torn and there");
-		System.out.println("is seaweed covering your face. As you remove the plant and your");
-		System.out.println("vision clears, you can see spirals of smoke coming from the");
-		System.out.println("chimneys of a nearby town. You make haste to climb the embankment,");
-		System.out.println("licking your lips at the thought of fresh bread. As hard as you");
-		System.out.println("try, you cannot remember the last time you ate or where you are.");
-		System.out.println("As the village comes into view, a man approaches. \"You there!\"");
-		System.out.println("He yells. \"How did you get here? What is your name? Explain");
-		System.out.println("yourself at once!\"");
+	private static String getName(Scanner console) throws FileNotFoundException {
+		System.out.println(readFile("1.001.txt"));
 		System.out.println();
 		System.out.print("Enter a character name: ");
 		String name = console.nextLine();
@@ -39,17 +22,8 @@ public class ClassicWorldMain {
 		return name;
 	}
 
-	private static String getType(String name, Scanner console) {
-		System.out.println("\"" + name + ", huh? Well I've heard worse I suppose. You don't");
-		System.out.println("look too bright so I'll make sure to talk real slow for ya. It");
-		System.out.println("just so happens that you're trespassing in our village. We have a");
-		System.out.println("main gate, but you seem to be slipping in from the river side.");
-		System.out.println("So I'm gonna have to go ahead and shoot you with one of my arrows.\"");
-		System.out.println("The man unslings his bow and notches an arrow, pointing it directly");
-		System.out.println("at you. \"Just out of curiosity, what do you do for a living? You");
-		System.out.println("don't look like anyone I've ever seen. Everyone around here is");
-		System.out.println("either a Warrior, Mage, or Rogue. What the hell are you supposed");
-		System.out.println("to be?\"");
+	private static String getType(String name, Scanner console) throws FileNotFoundException {
+		System.out.println(readFile("1.002.txt"));
 		System.out.println();
 		System.out.print("Enter a class:");
 		String type = console.nextLine();
