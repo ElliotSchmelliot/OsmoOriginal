@@ -1,0 +1,8 @@
+You leave town in the dead of night walking east traveling at a quick pace. It's quiet out... too quiet. 
+You travel for several hours without meeting anyone... or any thing. When the full moon is high in the 
+sky and the air is at it's most chilly a big black haired werewolf jumps out at you.
+<>
+WereWolf McNasty The Strange
+1 1 10 5
+You defeated WereWolf McNasty The Strange and headed back to town.
+end
