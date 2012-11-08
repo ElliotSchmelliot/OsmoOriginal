@@ -17,4 +17,14 @@ public class General {
 		}
 		return concat.trim();
 	}
+	
+	public static String choice(String prompt, String[] choices, Scanner input) {
+		System.out.println(prompt);
+		for (int i = 0; i < choices.length - 1; i++) {
+			System.out.print(choices[i] + ", ");
+		}
+		System.out.print("or " + choices[choices.length] + "? ");
+		return input.next();
+	}
+	
 }
