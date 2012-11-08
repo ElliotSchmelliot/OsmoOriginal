@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,8 +25,10 @@ public class General {
 		for (int i = 0; i < choices.length - 1; i++) {
 			System.out.print(choices[i] + ", ");
 		}
-		System.out.print("or " + choices[choices.length] + "? ");
-		return input.next();
+		System.out.print("or " + choices[choices.length - 1] + "? ");
+		List<String> james = new ArrayList();
+		return input.next().toLowerCase().trim();
+
 	}
 	
 }

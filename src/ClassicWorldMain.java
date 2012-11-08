@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 public class ClassicWorldMain extends General {
 	public static void main(String[] args) throws FileNotFoundException {
 		Scanner console = new Scanner(System.in);
+		String[] testWeapons = {"axe", "mace", "hammer", "shoes"};
+		System.out.println(choice("Printing shit as a test!", testWeapons, console));
 		System.out.println(readFile("Intro.txt"));
 		System.out.println();
 		String name = getName(console);
